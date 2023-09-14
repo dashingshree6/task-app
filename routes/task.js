@@ -12,9 +12,9 @@ router.post('/',verifyToken, createTask);
 router.get('/',verifyToken, getAllTask);
 
 // Update task completion status by task ID
-router.put('/:taskId',verifyToken, updateTaskStatus);
+router.put('/status/:taskId', updateTaskStatus);
 
 // Delete a task by task ID
-router.delete('/:taskId',verifyToken,deleteTask);
+router.delete('/:taskId',deleteTask);
 
 module.exports = router;
