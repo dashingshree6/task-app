@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 6000;
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://dashingshree6:kb85YfsvE5xigATA@cluster0.zisswne.mongodb.net/?retryWrites=true&w=majority', {
