@@ -17,8 +17,8 @@ exports.createTask = async (req, res) => {
 
 exports.getAllTask = async (req, res) => {
     try {
-      const tasks = await Task.find().sort({ createdAt: -1 });
-      res.status(200).json(tasks);
+      const tasks = await Task.find({userId:req.user?._id}).sort({ createdAt: -1 });
+      res.status(200).json(tasks.reverse());
     } catch (error) {
       res.status(500).json({ message: 'Server error' });
     }
@@ -27,7 +27,7 @@ exports.getAllTask = async (req, res) => {
 // Update task completion status by task ID
 exports.updateTaskStatus = async (req, res) => {
     const taskId = req.params.taskId;
-
+     console.log('taaskid.....................',taskId)
     try {
       const task = await Task.findByIdAndUpdate(
         taskId,
