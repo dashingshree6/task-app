@@ -1,5 +1,7 @@
 # task-app
 
+## Sreps to create development environment
+
 ## git clone 
 
 ## npm i
