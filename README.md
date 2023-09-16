@@ -1,6 +1,6 @@
 # task-app
 
-## Steps to create development environment
+## Guidelines to create development environment
 
 ## git clone 
 
